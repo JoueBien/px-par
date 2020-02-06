@@ -1,19 +1,23 @@
 ## Overview
-Px text is a small sass function that allows for the quick conversion of pixels to rem. Its primary purpose is to allow programmers to convert text sizes from pixel measurements into rem without requiring a calculator.
+Px par is a small sass function that allows for the quick conversion of pixels to rem. Its primary purpose is to allow programmers to convert container sizes from pixel measurements into % without requiring a calculator.
 
 ## Install 
-```npm install --save px-text```
+```npm install --save px-par```
 ## Use
 ### Import in sass
-```@import 'node_modules/px-text/text.scss';```
+```@import 'node_modules/px-par/index.scss';```
 ### Import using sass loader
-```@import 'px-text/text.scss';```
+```@import 'px-par/index.scss';```
 
 ### Example
 ```
 body {
-    font-size: px(18);
-    line-height: px(21);
+    .row {
+        width: 100%;
+        .cell {
+            width: px_par(100, 50);
+        }
+    }
 }
 ```
 
@@ -22,14 +26,15 @@ Running
 ``` npm test ```
 should ouput the following
 ```
-> px-text@0.1.0 test ...\...\px-text
+> px-par@0.1.3 test C:\Users\zach\Desktop\px-par\px-par
 > mocha
-  The function for px conversion to rem
-    √  px(16); Outputs 1rem
-    √  px(18); Outputs 1.125rem
-    √  px(32); Outputs 2rem
 
-  3 passing (14ms)
+  The function for px conversion to %
+    √  par_size(100, 50); Outputs calc( (100% / 100) * 50)
+    √  par_size(240, 20); Outputs calc( (100% / 240) * 20)
+
+
+  2 passing (17ms)
 ```
 
 
