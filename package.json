@@ -1,0 +1,31 @@
+{
+  "name": "px-par",
+  "version": "0.1.3",
+  "description": "A tool css for converting pixel measurements to % for grids.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Zach radloff",
+  "license": "MIT",
+  "devDependencies": {
+    "mocha": "^6.2.2",
+    "node-sass": "^4.13.1",
+    "sass-true": "^4.0.0"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JoueBien/px-par.git"
+  },
+  "keywords": [
+    "css",
+    "px",
+    "%",
+    "grid"
+  ],
+  "bugs": {
+    "url": "https://github.com/JoueBien/px-par/issues"
+  },
+  "homepage": "https://github.com/JoueBien/px-par#readme"
+}

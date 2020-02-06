@@ -1,0 +1,3 @@
+@function px_par($container-width, $child-width){
+  @return calc( (100% / #{$container-width}) * #{$child-width} );
+}
