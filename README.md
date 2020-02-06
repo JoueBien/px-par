@@ -1,5 +1,5 @@
 ## Overview
-Px par is a small sass function that allows for the quick conversion of pixels to rem. Its primary purpose is to allow programmers to convert container sizes from pixel measurements into % without requiring a calculator.
+Px par is a small sass function that allows for the quick conversion of pixels to rem. Its primary purpose is to allow programmers to convert container & child sizes from pixel measurements into % without requiring a calculator.
 
 ## Install 
 ```npm install --save px-par```
