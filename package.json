@@ -1,6 +1,6 @@
 {
   "name": "px-par",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "A tool css for converting pixel measurements to % for grids.",
   "main": "index.js",
   "scripts": {
