@@ -1,19 +1,26 @@
 {
   "name": "px-par",
-  "version": "0.2.3",
+  "version": "0.3.0",
   "description": "A tool css for converting pixel measurements to % for grids.",
-  "main": "index.js",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha ./src/**/*.js",
+    "build": "tsc",
+    "installNode": "nvm install 20.14.0",
+    "swapNode": "nvm use 20.14.0",
+    "installTypescript": "npm install -g typescript@4.5.5",
+    "typecheck": "tsc --noEmit --skipLibCheck --project tsconfig.json"
   },
   "author": "Zach radloff",
   "license": "MIT",
   "devDependencies": {
-    "mocha": "^6.2.2",
-    "node-sass": "^4.13.1",
-    "sass-true": "^4.0.0"
+    "@types/node": "^20.14.7",
+    "mocha": "^10.4.0",
+    "sass": "^1.77.6",
+    "sass-true": "^8.0.0",
+    "typescript": "^5.5.2"
   },
-  "dependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/JoueBien/px-par.git"

@@ -1,0 +1,76 @@
+@import "../../node_modules/sass-true/sass/true";
+@import "../../index.scss";
+
+@include describe("px_par function for px conversion to %") {
+  @include it(" px_par(100, 50); Outputs calc( ( 100% / 100 ) * 50 )") {
+    @include assert {
+      @include output {
+        width: px_par(100, 50);
+      }
+      @include expect {
+        width: #{"calc( ( 100% / 100 ) * 50 );"};
+      }
+    }
+  }
+
+  @include it(" px_par(240, 20); Outputs calc( ( 100% / 240) * 20 )") {
+    @include assert {
+      @include output {
+        width: px_par(240, 20);
+      }
+      @include expect {
+        width: #{"calc( ( 100% / 240 ) * 20 );"};
+      }
+    }
+  }
+
+  @include it(
+    " px_par(240, 20, 20px); Outputs calc( ( ( 100% / 240 ) * 20 ) + 20px )"
+  ) {
+    @include assert {
+      @include output {
+        width: px_par(240, 20, 20px);
+      }
+      @include expect {
+        width: #{"calc( ( ( 100% / 240 ) * 20 ) + 20px )"};
+      }
+    }
+  }
+}
+
+@include describe("The pxPar function for px conversion to %") {
+  @include it(" pxPar(100, 50); Outputs calc( ( 100% / 100 ) * 50 )") {
+    @include assert {
+      @include output {
+        width: pxPar(100, 50);
+      }
+      @include expect {
+        width: #{"calc( ( 100% / 100 ) * 50 );"};
+      }
+    }
+  }
+
+  @include it(" pxPar(240, 20); Outputs calc( ( 100% / 240 ) * 20 )") {
+    @include assert {
+      @include output {
+        width: pxPar(240, 20);
+      }
+      @include expect {
+        width: #{"calc( ( 100% / 240 ) * 20 );"};
+      }
+    }
+  }
+
+  @include it(
+    " pxPar(240, 20, 20px); Outputs calc( ( ( 100% / 240 ) * 20 ) + 20px )"
+  ) {
+    @include assert {
+      @include output {
+        width: pxPar(240, 20, 20px);
+      }
+      @include expect {
+        width: #{"calc( ( ( 100% / 240 ) * 20 ) + 20px )"};
+      }
+    }
+  }
+}

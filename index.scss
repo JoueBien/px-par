@@ -1,3 +1,30 @@
-@function px_par($container-width, $child-width){
-  @return calc( (100% / #{$container-width}) * #{$child-width} );
+$space: " ";
+
+/** * Calculates a % based child size based on the pixel measurements of it's parent's width. */
+@function px_par($container-width, $child-width, $extra-px: null) {
+  /** Include support for extra-px which is part of the JS version. */
+  @if ($extra-px) {
+    @return unquote(
+      "calc( ( ( 100% / #{$container-width} ) * #{$child-width} ) + #{$extra-px} )"
+    );
+  }
+  @return unquote(
+    "calc(#{$space}( 100% / #{$container-width} ) * #{$child-width} )"
+  );
+}
+
+/** 
+* Calculates a % based child size based on the pixel measurements of it's parent's width.
+* This version matches the new JS name.
+*/
+@function pxPar($container-width, $child-width, $extra-px: null) {
+  /** Include support for extra-px which is part of the JS version. */
+  @if ($extra-px) {
+    @return unquote(
+      "calc( ( ( 100% / #{$container-width} ) * #{$child-width} ) + #{$extra-px} )"
+    );
+  }
+  @return unquote(
+    "calc(#{$space}( 100% / #{$container-width} ) * #{$child-width} )"
+  );
 }
