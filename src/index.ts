@@ -5,7 +5,7 @@ export function pxPar(
   /** The width of the child - this should be in pixels. */
   childWidth: number,
   /** Any extra measurements to add or remove from the calculation.  */
-  extraPx: string
+  extraPx?: string
 ) {
   return `calc( ( (100% / ${containerWidth}) * ${childWidth} ) + ${
     extraPx || "0px"
@@ -19,7 +19,7 @@ export function px_par(
   /** The width of the child - this should be in pixels. */
   childWidth: number,
   /** Any extra measurements to add or remove from the calculation.  */
-  extraPx: string
+  extraPx?: string
 ) {
   return `calc( ( (100% / ${containerWidth}) * ${childWidth} ) + ${
     extraPx || "0px"
